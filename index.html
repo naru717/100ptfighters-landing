@@ -42,16 +42,13 @@
     .badge{width:42px;height:42px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);flex:none}
     h2{margin:0 0 12px;font-size:22px}
     .muted{color:var(--muted)}
-    /* スクショグリッド（任意：画像が準備できたら差し替え） */
     .shots{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .shot{background:#fff;border-radius:16px;box-shadow:var(--shadow);aspect-ratio:1290/2796;display:grid;place-items:center;color:#bbb;font-weight:700}
-    /* FAQ */
+    .shot{background:#fff;border-radius:16px;box-shadow:var(--shadow);width:100%;height:auto}
     details{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
     details+details{margin-top:12px}
     summary{cursor:pointer;font-weight:800;list-style:none}
     summary::-webkit-details-marker{display:none}
     details[open]{outline:2px solid #ffd2ea}
-    /* Footer */
     footer{text-align:center;color:var(--muted);padding:30px 0 50px}
   </style>
 </head>
@@ -117,15 +114,14 @@
     <!-- Screenshots -->
     <section id="shots" class="container">
       <h2>スクリーンショット</h2>
-      <p class="muted" style="margin:6px 0 14px">プレイ画像はApp Storeのスクリーンショットと同じものを掲載すると効果的です。</p>
+      <p class="muted" style="margin:6px 0 14px">実際のプレイ画面です</p>
       <div class="shots">
-        <!-- ここに画像URLがあれば <img> に差し替え可。無ければダミー枠のままでもOK -->
-        <div class="shot">Title</div>
-        <div class="shot">How to Play</div>
-        <div class="shot">Stats</div>
-        <div class="shot">Tournament</div>
-        <div class="shot">Battle</div>
-        <div class="shot">Final</div>
+        <img src="images/shot1.png" alt="タイトル画面" class="shot">
+        <img src="images/shot2.png" alt="遊び方画面" class="shot">
+        <img src="images/shot3.png" alt="ステータス振り分け" class="shot">
+        <img src="images/shot4.png" alt="トーナメント" class="shot">
+        <img src="images/shot5.png" alt="バトル" class="shot">
+        <img src="images/shot6.png" alt="ファイナル" class="shot">
       </div>
     </section>
 
@@ -169,7 +165,6 @@
   </footer>
 
   <script>
-    // スムーススクロール
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const id=a.getAttribute('href').slice(1);
