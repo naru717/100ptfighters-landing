@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>100pt Fighters | 公式サイト</title>
+  <meta name="description" content="100pt Fighters は、かわいいキャラで100ポイントを振り分けて戦う、シンプルだけど奥が深いバトルゲーム！オンライン対戦・トーナメント・ガチャ対応。" />
+  <meta property="og:title" content="100pt Fighters | 公式サイト" />
+  <meta property="og:description" content="かわいい×戦略。100ポイントを振り分けて戦う新感覚バトル！" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://naru717.github.io/100ptfighters-landing/" />
+  <meta property="og:image" content="og.png" />
+  <meta name="theme-color" content="#ff6fb1" />
+  <style>
+    :root{
+      --pink:#ff6fb1; --pink2:#ff96c9; --ink:#2a2a2a; --muted:#666;
+      --bg1:#fff3f9; --bg2:#f4fbff; --card:#ffffffcc; --shadow:0 10px 30px rgba(0,0,0,.12);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;color:var(--ink);font-family:"Hiragino Maru Gothic ProN",system-ui,-apple-system,"Noto Sans JP",sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2))}
+    a{color:var(--pink)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(90deg,#ff7dbf,#ff6fb1);color:#fff;box-shadow:0 6px 20px rgba(255,111,177,.35)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 35%, #ffd7ea 36% 100%);position:relative;box-shadow:inset 0 -2px 6px rgba(0,0,0,.12)}
+    .logo::after{content:"✨";position:absolute;inset:0;display:grid;place-items:center}
+    .btn{display:inline-flex;align-items:center;gap:.5em;text-decoration:none;background:#fff;color:#ff2f93;font-weight:800;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow)}
+    .btn.store{background:#000;color:#fff}
+    .hero{padding:56px 14px 36px;text-align:center}
+    .hero h1{font-size:clamp(28px,5vw,44px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff, 0 10px 28px rgba(255,60,154,.3)}
+    .hero p{color:var(--muted);max-width:760px;margin:12px auto 18px;line-height:1.85}
+    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .chip{background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow);font-size:14px}
+    section{padding:26px 0}
+    .grid{display:grid;gap:18px}
+    @media(min-width:860px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;backdrop-filter:saturate(130%) blur(6px)}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .badge{width:42px;height:42px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);flex:none}
+    h2{margin:0 0 12px;font-size:22px}
+    .muted{color:var(--muted)}
+    /* スクショグリッド（任意：画像が準備できたら差し替え） */
+    .shots{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .shot{background:#fff;border-radius:16px;box-shadow:var(--shadow);aspect-ratio:1290/2796;display:grid;place-items:center;color:#bbb;font-weight:700}
+    /* FAQ */
+    details{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+    details+details{margin-top:12px}
+    summary{cursor:pointer;font-weight:800;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    details[open]{outline:2px solid #ffd2ea}
+    /* Footer */
+    footer{text-align:center;color:var(--muted);padding:30px 0 50px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand"><div class="logo" aria-hidden="true"></div><span>100pt Fighters</span></div>
+      <nav class="links" style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="#features">特徴</a>
+        <a class="btn" href="#shots">スクリーンショット</a>
+        <a class="btn" href="#faq">FAQ</a>
+        <a class="btn store" href="YOUR_APP_STORE_LINK">App Storeで入手</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <h1>かわいい×戦略！100ポイントを振り分けて戦う新感覚バトル</h1>
+      <p>100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
+      100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！</p>
+      <div class="cta">
+        <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store で入手</a>
+        <a class="btn" href="#shots">プレイ画面を見る</a>
+      </div>
+      <div class="chips">
+        <div class="chip">🌐 オンライン対戦</div>
+        <div class="chip">🏆 16人トーナメント</div>
+        <div class="chip">🎲 ガチャ＆スキン</div>
+        <div class="chip">⚡ 高速バトルモード</div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="container">
+      <h2>ゲームの特徴</h2>
+      <div class="grid cols-3" style="margin-top:12px">
+        <div class="card feature">
+          <div class="badge">🎯</div>
+          <div>
+            <h3>100ptの配分が勝負</h3>
+            <p class="muted">たいりょく/こうげき/ぼうぎょ/すばやさを自由に配分。性格スキルと組み合わせて最強ビルドを見つけよう。</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="badge">🌟</div>
+          <div>
+            <h3>かわいいスキン</h3>
+            <p class="muted">ガチャやバトルでスキンを入手＆着せ替え。推しキャラでトーナメントに挑戦！</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="badge">⚔️</div>
+          <div>
+            <h3>オンライン＆トーナメント</h3>
+            <p class="muted">16人勝ち抜きの白熱バトル！オンライン対戦で全国のライバルに挑め。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="shots" class="container">
+      <h2>スクリーンショット</h2>
+      <p class="muted" style="margin:6px 0 14px">プレイ画像はApp Storeのスクリーンショットと同じものを掲載すると効果的です。</p>
+      <div class="shots">
+        <!-- ここに画像URLがあれば <img> に差し替え可。無ければダミー枠のままでもOK -->
+        <div class="shot">Title</div>
+        <div class="shot">How to Play</div>
+        <div class="shot">Stats</div>
+        <div class="shot">Tournament</div>
+        <div class="shot">Battle</div>
+        <div class="shot">Final</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container">
+      <h2>よくある質問</h2>
+      <div class="grid">
+        <details class="card">
+          <summary>課金（まめコイン）は安全ですか？</summary>
+          <div class="muted" style="margin-top:10px">Appleの決済システム（App内課金）を利用しています。支払い情報は開発者側で保持しません。</div>
+        </details>
+        <details class="card">
+          <summary>オンライン対戦がつながりにくい</summary>
+          <div class="muted" style="margin-top:10px">通信状況や時間帯により混雑する場合があります。Wi-Fi推奨・バックグラウンド通信の停止をお試しください。</div>
+        </details>
+        <details class="card">
+          <summary>スキンが装備できない</summary>
+          <div class="muted" style="margin-top:10px">購入後に「プロフィール → スキン選択」から装備可能です。反映されない場合はアプリ再起動をお試しください。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container" style="text-align:center">
+      <div class="card" style="display:inline-block;padding:24px 28px">
+        <h2 style="margin:0 0 8px">今すぐダウンロード</h2>
+        <p class="muted" style="margin:0 0 14px">かわいい×戦略のバトルを体験しよう！</p>
+        <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store で入手</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:8px">
+        <a class="btn" href="https://naru717.github.io/100ptfighters-support/" style="background:#fff;color:#ff2f93">サポートページ</a>
+        <a class="btn" href="#shots">スクリーンショット</a>
+      </div>
+      <small>© 2025 100pt Fighters</small>
+    </div>
+  </footer>
+
+  <script>
+    // スムーススクロール
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}) }
+      });
+    });
+  </script>
+</body>
+</html>
