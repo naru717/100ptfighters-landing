@@ -1,195 +1,196 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>100pt Fighters | 公式サイト</title>
-  <meta name="description" content="100pt Fighters は、かわいいキャラで100ポイントを振り分けて戦う、シンプルだけど奥が深いバトルゲーム！オンライン対戦・トーナメント・ガチャ対応。" />
-  <meta property="og:title" content="100pt Fighters | 公式サイト" />
-  <meta property="og:description" content="かわいい×戦略。100ポイントを振り分けて戦う新感覚バトル！" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://naru717.github.io/100ptfighters-landing/" />
-  <meta property="og:image" content="og.png" />
-  <meta name="theme-color" content="#ff6fb1" />
   <style>
-    :root{
-      --pink:#ff6fb1; --pink2:#ff96c9; --ink:#2a2a2a; --muted:#666;
-      --bg1:#fff3f9; --bg2:#f4fbff; --card:#ffffffcc; --shadow:0 10px 30px rgba(0,0,0,.12);
-      --radius:20px;
+    body {
+      font-family: 'Hiragino Maru Gothic Pro', 'Arial Rounded MT Bold', sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg, #fff7fb, #f5fbff);
+      color: #333;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;color:var(--ink);font-family:"Hiragino Maru Gothic ProN",system-ui,-apple-system,"Noto Sans JP",sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2))}
-    a{color:var(--pink)}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;z-index:10;background:linear-gradient(90deg,#ff7dbf,#ff6fb1);color:#fff;box-shadow:0 6px 20px rgba(255,111,177,.35)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
-    .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 35%, #ffd7ea 36% 100%);position:relative;box-shadow:inset 0 -2px 6px rgba(0,0,0,.12)}
-    .logo::after{content:"✨";position:absolute;inset:0;display:grid;place-items:center}
-    .btn{display:inline-flex;align-items:center;gap:.5em;text-decoration:none;background:#fff;color:#ff2f93;font-weight:800;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow)}
-    .btn.store{background:#000;color:#fff}
-    .hero{padding:56px 14px 36px;text-align:center}
-    .hero h1{font-size:clamp(28px,5vw,44px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff, 0 10px 28px rgba(255,60,154,.3)}
-    .hero p{color:var(--muted);max-width:760px;margin:12px auto 18px;line-height:1.85}
-    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-    .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
-    .chip{background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow);font-size:14px}
-    section{padding:26px 0}
-    .grid{display:grid;gap:18px}
-    @media(min-width:860px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:1fr 1fr}}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;backdrop-filter:saturate(130%) blur(6px)}
-    .feature{display:flex;gap:12px;align-items:flex-start}
-    .badge{width:42px;height:42px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);flex:none}
-    h2{margin:0 0 12px;font-size:22px}
-    .muted{color:var(--muted)}
-    .shots{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .shot{background:#fff;border-radius:16px;box-shadow:var(--shadow);width:100%;height:auto}
-    details{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
-    details+details{margin-top:12px}
-    summary{cursor:pointer;font-weight:800;list-style:none}
-    summary::-webkit-details-marker{display:none}
-    details[open]{outline:2px solid #ffd2ea}
-    footer{text-align:center;color:var(--muted);padding:30px 0 50px}
+
+    header {
+      background: linear-gradient(90deg, #ff7ac6, #ff66a3);
+      color: white;
+      text-align: center;
+      padding: 16px;
+      font-size: 1.4em;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,.05);
+      position: sticky;
+      top: 64px;
+      z-index: 90;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ff4da6;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background: #ffe6f2;
+    }
+
+    main {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff4da6;
+    }
+
+    .screenshot {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .screenshot img {
+      width: 100%;
+      max-height: 540px;   /* スマホ縦長画面の見やすいサイズ */
+      object-fit: contain;
+      border-radius: 28px; /* 丸角を大きくしてスマホ感 */
+      border: 6px solid #f2f2f2;
+      box-shadow: 0 4px 14px rgba(0,0,0,.15);
+      background: white;
+    }
+
+    .screenshot p {
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85em;
+      background: #fff;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4da6;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 28px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,.15);
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.1);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav container">
-      <div class="brand"><div class="logo" aria-hidden="true"></div><span>100pt Fighters</span></div>
-      <nav class="links" style="display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn" href="#features">特徴</a>
-        <a class="btn" href="#shots">スクリーンショット</a>
-        <a class="btn" href="#faq">FAQ</a>
-        <a class="btn store" href="YOUR_APP_STORE_LINK">App Storeで入手</a>
-      </nav>
-    </div>
-  </header>
+  <header>✨100pt Fighters</header>
+  <nav>
+    <a href="#features">特徴</a>
+    <a href="#screenshots">スクリーンショット</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
 
   <main>
-    <!-- Hero -->
-    <section class="hero container">
-      <h1>かわいい×戦略！100ポイントを振り分けて戦う新感覚バトル</h1>
-      <p>100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
-      100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！</p>
-      <div class="cta">
-        <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store で入手</a>
-        <a class="btn" href="#shots">プレイ画面を見る</a>
-      </div>
-      <div class="chips">
-        <div class="chip">🌐 オンライン対戦</div>
-        <div class="chip">🏆 16人トーナメント</div>
-        <div class="chip">🎲 ガチャ＆スキン</div>
-        <div class="chip">⚡ 高速バトルモード</div>
+    <section id="features">
+      <h2>特徴</h2>
+      <p>100ポイントを自由に振り分けて戦う、シンプルだけど奥が深いバトルゲーム！</p>
+      <ul>
+        <li>🎮 ステータスを割り振り、自分だけのファイターを作成</li>
+        <li>✨ かわいいキャラやスキン機能</li>
+        <li>🏆 トーナメントモードやオンライン対戦</li>
+        <li>🎲 ガチャで新しいスキンをゲット</li>
+      </ul>
+      <div style="text-align:center; margin-top:20px;">
+        <a href="https://apps.apple.com/jp/app/" target="_blank" class="btn">App Storeで入手</a>
       </div>
     </section>
 
-    <!-- Features -->
-    <section id="features" class="container">
-      <h2>ゲームの特徴</h2>
-      <div class="grid cols-3" style="margin-top:12px">
-        <div class="card feature">
-          <div class="badge">🎯</div>
-          <div>
-            <h3>100ptの配分が勝負</h3>
-            <p class="muted">たいりょく/こうげき/ぼうぎょ/すばやさを自由に配分。性格スキルと組み合わせて最強ビルドを見つけよう。</p>
-          </div>
-        </div>
-        <div class="card feature">
-          <div class="badge">🌟</div>
-          <div>
-            <h3>かわいいスキン</h3>
-            <p class="muted">ガチャやバトルでスキンを入手＆着せ替え。推しキャラでトーナメントに挑戦！</p>
-          </div>
-        </div>
-        <div class="card feature">
-          <div class="badge">⚔️</div>
-          <div>
-            <h3>オンライン＆トーナメント</h3>
-            <p class="muted">16人勝ち抜きの白熱バトル！オンライン対戦で全国のライバルに挑め。</p>
-          </div>
-        </div>
+    <section id="screenshots">
+      <h2>スクリーンショット</h2>
+      <p style="text-align:center;">実際のプレイ画面です</p>
+
+      <div class="screenshot">
+        <img src="shot1.png" alt="タイトル画面">
+        <p>タイトル画面</p>
+      </div>
+      <div class="screenshot">
+        <img src="shot2.png" alt="ステータス振り分け">
+        <p>ステータス振り分け</p>
+      </div>
+      <div class="screenshot">
+        <img src="shot3.png" alt="バトル画面">
+        <p>バトル画面</p>
+      </div>
+      <div class="screenshot">
+        <img src="shot4.png" alt="トーナメント">
+        <p>トーナメント</p>
+      </div>
+      <div class="screenshot">
+        <img src="shot5.png" alt="ガチャ">
+        <p>ガチャ</p>
+      </div>
+      <div class="screenshot">
+        <img src="shot6.png" alt="決戦戦">
+        <p>決戦戦</p>
       </div>
     </section>
 
-    <!-- Screenshots -->
-   <section id="shots" class="shots-section">
-  <h2>スクリーンショット</h2>
-  <p class="shots-note">実際のプレイ画面です</p>
-
-  <div class="shots">
-    <figure class="shot">
-      <img src="./shot1.png" alt="タイトル画面" loading="lazy">
-      <figcaption>タイトル画面</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="./shot2.png" alt="ステータス振り分け" loading="lazy">
-      <figcaption>ステータス振り分け</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="./shot3.png" alt="バトル画面1" loading="lazy">
-      <figcaption>バトル画面</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="./shot4.png" alt="トーナメント" loading="lazy">
-      <figcaption>トーナメント</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="./shot5.png" alt="ガチャ" loading="lazy">
-      <figcaption>ガチャ</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="./shot6.png" alt="バトル画面2" loading="lazy">
-      <figcaption>バトル画面</figcaption>
-    </figure>
-  </div>
-</section>
-    <!-- FAQ -->
-    <section id="faq" class="container">
-      <h2>よくある質問</h2>
-      <div class="grid">
-        <details class="card">
-          <summary>課金（まめコイン）は安全ですか？</summary>
-          <div class="muted" style="margin-top:10px">Appleの決済システム（App内課金）を利用しています。支払い情報は開発者側で保持しません。</div>
-        </details>
-        <details class="card">
-          <summary>オンライン対戦がつながりにくい</summary>
-          <div class="muted" style="margin-top:10px">通信状況や時間帯により混雑する場合があります。Wi-Fi推奨・バックグラウンド通信の停止をお試しください。</div>
-        </details>
-        <details class="card">
-          <summary>スキンが装備できない</summary>
-          <div class="muted" style="margin-top:10px">購入後に「プロフィール → スキン選択」から装備可能です。反映されない場合はアプリ再起動をお試しください。</div>
-        </details>
-      </div>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <p><b>Q. 無料で遊べますか？</b><br> A. 基本プレイ無料です。追加でスキンやガチャが楽しめます。</p>
+      <p><b>Q. オフラインでも遊べますか？</b><br> A. CPU戦やトーナメントはオフラインでも遊べます。</p>
+      <p><b>Q. 広告はありますか？</b><br> A. ガチャのみ広告視聴で1回無料プレイが可能です。</p>
     </section>
 
-    <!-- Call to Action -->
-    <section class="container" style="text-align:center">
-      <div class="card" style="display:inline-block;padding:24px 28px">
-        <h2 style="margin:0 0 8px">今すぐダウンロード</h2>
-        <p class="muted" style="margin:0 0 14px">かわいい×戦略のバトルを体験しよう！</p>
-        <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store で入手</a>
-      </div>
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <p style="text-align:center;">ご質問や不具合報告は以下のフォームからお願いします。</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJVahgeDf8dIaJFEEH8w2ZCM4H_mgCAjnRf1L-LCMN12Y46g/viewform?embedded=true">読み込んでいます…</iframe>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:8px">
-        <a class="btn" href="https://naru717.github.io/100ptfighters-support/" style="background:#fff;color:#ff2f93">サポートページ</a>
-        <a class="btn" href="#shots">スクリーンショット</a>
-      </div>
-      <small>© 2025 100pt Fighters</small>
-    </div>
+    © 2025 100pt Fighters All Rights Reserved.
   </footer>
-
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href').slice(1);
-        const el=document.getElementById(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}) }
-      });
-    });
-  </script>
 </body>
 </html>
