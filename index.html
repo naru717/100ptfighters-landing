@@ -35,7 +35,7 @@
     a{color:var(--pink)}
     img{max-width:100%;height:auto}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;z-index:10;background:linear-gradient(90deg,#ff7dbf,#ff6fb1);color:#fff;box-shadow:0 6px 20px rgba(255,111,177,.35)}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,#ff7dbf,#ff6fb1);color:#fff;box-shadow:0 6px 20px rgba(255,111,177,.35)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:900}
     .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 35%, #ffd7ea 36% 100%);position:relative;box-shadow:inset 0 -2px 6px rgba(0,0,0,.12)}
@@ -43,25 +43,32 @@
     .btn{display:inline-flex;align-items:center;gap:.5em;text-decoration:none;background:#fff;color:#ff2f93;font-weight:800;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow)}
     .btn.store{background:#000;color:#fff}
 
-    .hero{padding:56px 14px 36px;text-align:center;position:relative;overflow:hidden}
+    /* ===== Hero ===== */
+    .hero{padding:64px 14px 42px;position:relative;overflow:hidden}
+    .hero::before{
+      content:"";position:absolute;inset:-20px -20px 0 -20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.0) 0%, rgba(255,255,255,.5) 60%, rgba(255,255,255,.0) 100%);
+      pointer-events:none;z-index:0;
+    }
+    .hero-content{position:relative;z-index:3;text-align:center}
     .hero h1{font-size:clamp(28px,5vw,44px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff, 0 10px 28px rgba(255,60,154,.3)}
     .hero p{color:var(--muted);max-width:780px;margin:12px auto 18px;line-height:1.85}
     .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
     .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
     .chip{background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow);font-size:14px}
 
-    /* ヒーロー下のステッカー帯 */
-    .sticker-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:24px auto 0}
+    /* ヒーロー下のステッカー帯（文字と干渉しないよう余白広め） */
+    .sticker-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:28px auto 4px;position:relative;z-index:2}
     .sticker{background:#fff;border:1px solid #ffd4ea;border-radius:16px;padding:8px 12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
     .sticker img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.1))}
     .sticker span{font-weight:800;color:#ff2f93}
 
-    /* 背景でふわふわ浮かぶキャラ */
-    .floater{position:absolute;opacity:.9;filter:drop-shadow(0 14px 24px rgba(0,0,0,.15));animation:floatY 6s ease-in-out infinite alternate}
-    .floater.f1{left:-20px;top:40px;transform:rotate(-8deg)}
-    .floater.f2{right:-10px;top:24px;animation-delay:1s;transform:rotate(6deg)}
-    .floater.f3{left:10%;bottom:-20px;animation-delay:2s;transform:rotate(-4deg)}
-    .floater img{width:90px;height:auto}
+    /* 背景でふわふわ浮かぶキャラ（背面固定） */
+    .floater{position:absolute;z-index:1;opacity:.9;filter:drop-shadow(0 14px 24px rgba(0,0,0,.15));animation:floatY 6s ease-in-out infinite alternate;pointer-events:none}
+    .floater.f1{left:-16px;top:48px;transform:rotate(-8deg)}
+    .floater.f2{right:-8px;top:36px;animation-delay:1s;transform:rotate(6deg)}
+    .floater.f3{left:8%;bottom:-8px;animation-delay:2s;transform:rotate(-4deg)}
+    .floater img{width:86px;height:auto}
     @keyframes floatY{from{transform:translateY(0) rotate(var(--rot,0deg))} to{transform:translateY(-14px) rotate(var(--rot,0deg))}}
     @media (prefers-reduced-motion: reduce){.floater{animation:none}}
 
@@ -103,6 +110,21 @@
     .polaroid .cap{font-weight:800;color:#ff2f93;margin-top:6px}
 
     footer{text-align:center;color:var(--muted);padding:30px 0 50px}
+
+    /* ======= モバイル安全マージン（重なり防止） ======= */
+    @media (max-width: 560px){
+      .hero{padding:70px 14px 54px}
+      .floater img{width:64px}
+      .floater.f1{top:60px;left:-28px}
+      .floater.f2{top:44px;right:-26px}
+      .floater.f3{bottom:-10px;left:6%}
+      .sticker-row{margin-top:30px}
+    }
+    @media (max-width: 400px){
+      .floater.f2{display:none}   /* 一部非表示でさらに干渉低減 */
+      .floater img{width:58px}
+      .hero h1{font-size:clamp(26px,7vw,36px)}
+    }
   </style>
 
   <!-- 構造化データ：WebSite -->
@@ -164,33 +186,36 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero container">
-      <h1>100ポイントファイターズ 公式サイト｜かわいい×戦略の新感覚バトル</h1>
-      <p>100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
-      100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！</p>
-      <div class="cta">
-        <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store で入手</a>
-        <a class="btn" href="#shots">プレイ画面を見る</a>
-      </div>
-      <div class="chips" aria-label="特徴">
-        <div class="chip">🌐 オンライン対戦</div>
-        <div class="chip">🏆 16人トーナメント</div>
-        <div class="chip">🎲 ガチャ＆スキン</div>
-        <div class="chip">⚡ 高速バトルモード</div>
-      </div>
-
-      <!-- ヒーロー帯：人気キャラ -->
-      <div class="sticker-row" aria-label="人気キャラ">
-        <div class="sticker"><img src="mamet.png" alt="100ポイントファイターズの主人公キャラ：マメット"><span>マメット</span></div>
-        <div class="sticker"><img src="tomomin.png" alt="100pt Fighters のキャラ：ともみん（キャッ！）"><span>ともみん</span></div>
-        <div class="sticker"><img src="black.png" alt="100pt Fighters のボス：ブラックビーン"><span>ブラックビーン</span></div>
-        <div class="sticker"><img src="warashi.png" alt="100pt Fighters のスペシャルキャラ：わらし"><span>わらし</span></div>
-      </div>
-
-      <!-- 背景の浮遊キャラ（装飾） -->
+    <section class="hero">
+      <!-- 背景の浮遊キャラ（背面なので文字と被らない） -->
       <div class="floater f1" style="--rot:-8deg"><img src="tomomin.png" alt="" aria-hidden="true"></div>
       <div class="floater f2" style="--rot:6deg"><img src="black.png" alt="" aria-hidden="true"></div>
       <div class="floater f3" style="--rot:-4deg"><img src="mamet.png" alt="" aria-hidden="true"></div>
+
+      <!-- 文字＆ボタンは最前面に固定 -->
+      <div class="hero-content container">
+        <h1>100ポイントファイターズ 公式サイト｜かわいい×戦略の新感覚バトル</h1>
+        <p>100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
+        100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！</p>
+        <div class="cta">
+          <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store で入手</a>
+          <a class="btn" href="#shots">プレイ画面を見る</a>
+        </div>
+        <div class="chips" aria-label="特徴">
+          <div class="chip">🌐 オンライン対戦</div>
+          <div class="chip">🏆 16人トーナメント</div>
+          <div class="chip">🎲 ガチャ＆スキン</div>
+          <div class="chip">⚡ 高速バトルモード</div>
+        </div>
+
+        <!-- ヒーロー帯：人気キャラ（前面だが文字と離して配置） -->
+        <div class="sticker-row" aria-label="人気キャラ">
+          <div class="sticker"><img src="mamet.png" alt="100ポイントファイターズの主人公キャラ：マメット"><span>マメット</span></div>
+          <div class="sticker"><img src="tomomin.png" alt="100pt Fighters のキャラ：ともみん（キャッ！）"><span>ともみん</span></div>
+          <div class="sticker"><img src="black.png" alt="100pt Fighters のボス：ブラックビーン"><span>ブラックビーン</span></div>
+          <div class="sticker"><img src="warashi.png" alt="100pt Fighters のスペシャルキャラ：わらし"><span>わらし</span></div>
+        </div>
+      </div>
     </section>
 
     <!-- Features -->
