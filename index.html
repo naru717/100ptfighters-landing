@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>100ポイントファイターズ | 100pt Fighters 公式サイト</title>
   <meta name="description" content="100ポイントファイターズ（100pt Fighters）は、かわいい豆キャラで100ポイントを振り分けて戦う戦略バトルゲーム！オンライン対戦・トーナメント・ガチャ対応のiPhoneアプリ。マメット・ブラックビーン・ともみんなど個性豊かなキャラで頂点を目指そう。" />
-  <meta name="keywords" content="100pt Fighters,100ポイントファイターズ,公式サイト,ゲーム,アプリ,iPhone,オンライン対戦,トーナメント,バトル,ガチャ,スキン,マメット,ブラックビーン,ともみん" />
+  <meta name="keywords" content="100pt Fighters,100ポイントファイターズ,公式サイト,ゲーム,アプリ,iPhone,オンライン対戦,トーナメント,バトル,ガチャ,スキン,マメット,ブラックビーン,ともみん,2P対戦" />
   <link rel="canonical" href="https://naru717.github.io/100ptfighters-landing/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
@@ -52,21 +52,22 @@
     }
     .hero-content{position:relative;z-index:3;text-align:center}
     .hero h1{font-size:clamp(28px,5vw,44px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff, 0 10px 28px rgba(255,60,154,.3)}
+    .hero .sub{display:block;margin-top:.25em;font-size:clamp(16px,3.4vw,22px);color:var(--muted);font-weight:700}
     .hero p{color:var(--muted);max-width:780px;margin:12px auto 18px;line-height:1.85}
     .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
     .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
     .chip{background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow);font-size:14px}
 
-    /* ヒーロー下のステッカー帯（文字と干渉しないよう余白広め） */
+    /* ヒーロー下のステッカー帯 */
     .sticker-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:28px auto 4px;position:relative;z-index:2}
     .sticker{background:#fff;border:1px solid #ffd4ea;border-radius:16px;padding:8px 12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
     .sticker img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.1))}
     .sticker span{font-weight:800;color:#ff2f93}
 
     /* 背景でふわふわ浮かぶキャラ（背面固定） */
-    .floater{position:absolute;z-index:1;opacity:.9;filter:drop-shadow(0 14px 24px rgba(0,0,0,.15));animation:floatY 6s ease-in-out infinite alternate;pointer-events:none}
-    .floater.f1{left:-16px;top:48px;transform:rotate(-8deg)}
-    .floater.f2{right:-8px;top:36px;animation-delay:1s;transform:rotate(6deg)}
+    .floater{position:absolute;z-index:1;opacity:.95;filter:drop-shadow(0 14px 24px rgba(0,0,0,.15));animation:floatY 6s ease-in-out infinite alternate;pointer-events:none}
+    .floater.f1{left:8px;top:48px;transform:rotate(-8deg)}
+    .floater.f2{right:8px;top:36px;animation-delay:1s;transform:rotate(6deg)}
     .floater.f3{left:8%;bottom:-8px;animation-delay:2s;transform:rotate(-4deg)}
     .floater img{width:86px;height:auto}
     @keyframes floatY{from{transform:translateY(0) rotate(var(--rot,0deg))} to{transform:translateY(-14px) rotate(var(--rot,0deg))}}
@@ -111,18 +112,21 @@
 
     footer{text-align:center;color:var(--muted);padding:30px 0 50px}
 
-    /* ======= モバイル安全マージン（重なり防止） ======= */
+    /* ======= モバイル安全マージン（見切れ対策を強化） ======= */
     @media (max-width: 560px){
       .hero{padding:70px 14px 54px}
-      .floater img{width:64px}
-      .floater.f1{top:60px;left:-28px}
-      .floater.f2{top:44px;right:-26px}
-      .floater.f3{bottom:-10px;left:6%}
+      /* 端に寄りすぎないよう内側へ寄せる */
+      .floater img{width:70px}
+      .floater.f1{top:62px;left:12px}
+      .floater.f2{top:54px;right:12px}
+      /* 下側は中央に寄せて左右余白を確保 */
+      .floater.f3{bottom:-6px;left:50%;transform:translateX(-50%) rotate(-4deg)}
       .sticker-row{margin-top:30px}
     }
     @media (max-width: 400px){
-      .floater.f2{display:none}   /* 一部非表示でさらに干渉低減 */
-      .floater img{width:58px}
+      .floater img{width:60px}
+      .floater.f1{left:10px;top:64px}
+      .floater.f2{right:10px;top:58px}
       .hero h1{font-size:clamp(26px,7vw,36px)}
     }
   </style>
@@ -194,7 +198,10 @@
 
       <!-- 文字＆ボタンは最前面に固定 -->
       <div class="hero-content container">
-        <h1>100ポイントファイターズ 公式サイト｜かわいい×戦略の新感覚バトル</h1>
+        <h1>
+          100ポイントファイターズ 公式サイト
+          <span class="sub">かわいい×戦略の新感覚バトル</span>
+        </h1>
         <p>100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
         100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！</p>
         <div class="cta">
@@ -205,7 +212,7 @@
           <div class="chip">🌐 オンライン対戦</div>
           <div class="chip">🏆 16人トーナメント</div>
           <div class="chip">🎲 ガチャ＆スキン</div>
-          <div class="chip">⚡ 高速バトルモード</div>
+          <div class="chip">👥 2P対戦モード</div>
         </div>
 
         <!-- ヒーロー帯：人気キャラ（前面だが文字と離して配置） -->
@@ -277,11 +284,11 @@
           <h3>ブラックビーン</h3>
           <p>伝説のオーラをまとう強敵。攻撃偏重のロマン砲ビルドが人気！</p>
         </div>
-        <!-- Densetu -->
+        <!-- Densetsu -->
         <div class="char card">
           <div class="bubble">レア</div>
           <div class="figure">
-            <img src="densetu.png" alt="伝説のまめ（100pt Fighters レアスキン） 画像">
+            <img src="densetsu.png" alt="伝説のまめ（100pt Fighters レアスキン） 画像">
           </div>
           <h3>伝説のまめ</h3>
           <p>超希少スキン。眩いエフェクトで会場の視線を独り占め！</p>
