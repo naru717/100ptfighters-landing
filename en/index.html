@@ -3,53 +3,424 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>100pt Fighters | Official Site</title>
-  <meta name="description" content="100pt Fighters is a cute yet strategic battle game for iPhone. Distribute 100 points to build your fighter and compete online!" />
+  <title>100pt Fighters | Official Website</title>
+  <meta name="description" content="100pt Fighters is a cute yet strategic iPhone battle game. Distribute 100 points to build your fighter and enjoy online battles, tournaments, gacha, and skins!" />
+  <meta name="keywords" content="100pt Fighters, 100 points, iPhone, game, mobile game, online battle, tournament, gacha, skins, cute characters, 2P mode" />
   <link rel="canonical" href="https://naru717.github.io/100ptfighters-landing/en/" />
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="ja" href="https://naru717.github.io/100ptfighters-landing/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- hreflang (SEO) -->
   <link rel="alternate" hreflang="en" href="https://naru717.github.io/100ptfighters-landing/en/" />
+  <link rel="alternate" hreflang="ja" href="https://naru717.github.io/100ptfighters-landing/" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="100pt Fighters | Official Website" />
+  <meta property="og:description" content="Cute × Strategy. Distribute 100 points and battle online! Tournaments & gacha available." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://naru717.github.io/100ptfighters-landing/en/" />
+  <meta property="og:image" content="https://naru717.github.io/100ptfighters-landing/og.png" />
+  <meta property="og:site_name" content="100pt Fighters" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta name="theme-color" content="#ff6fb1" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="100pt Fighters | Official Website" />
+  <meta name="twitter:description" content="Cute × Strategy. Distribute 100 points and battle online!" />
+  <meta name="twitter:image" content="https://naru717.github.io/100ptfighters-landing/og.png" />
+
   <style>
-    body{font-family:system-ui,-apple-system,"Noto Sans",sans-serif;margin:0;padding:24px;background:#f7fbff;color:#222}
-    .wrap{max-width:920px;margin:0 auto}
-    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .btn{display:inline-block;background:#000;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px}
-    .btn.sub{background:#fff;color:#d4288a;border:1px solid #ffd0e8}
-    h1{color:#d4288a;margin:10px 0}
-    .chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-    .chip{background:#fff;border:1px solid #ffd0e8;border-radius:999px;padding:6px 10px}
-    footer{margin-top:40px;color:#666}
+    :root{
+      --pink:#ff6fb1; --pink2:#ff96c9; --ink:#2a2a2a; --muted:#666;
+      --bg1:#fff3f9; --bg2:#f4fbff; --card:#ffffffcc; --shadow:0 10px 30px rgba(0,0,0,.12);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;color:var(--ink);font-family:"Hiragino Maru Gothic ProN",system-ui,-apple-system,"Noto Sans", "Noto Sans JP",sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2))}
+    a{color:var(--pink)}
+    img{max-width:100%;height:auto}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(90deg,#ff7dbf,#ff6fb1);color:#fff;box-shadow:0 6px 20px rgba(255,111,177,.35)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .logo{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 35%, #ffd7ea 36% 100%);position:relative;box-shadow:inset 0 -2px 6px rgba(0,0,0,.12)}
+    .logo::after{content:"✨";position:absolute;inset:0;display:grid;place-items:center}
+    .btn{display:inline-flex;align-items:center;gap:.5em;text-decoration:none;background:#fff;color:#ff2f93;font-weight:800;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow)}
+    .btn.store{background:#000;color:#fff}
+    .btn.lang{background:#fff;color:#ff2f93}
+
+    /* ===== Hero ===== */
+    .hero{padding:64px 14px 42px;position:relative;overflow:hidden}
+    .hero::before{
+      content:"";position:absolute;inset:-20px -20px 0 -20px;
+      background:linear-gradient(180deg, rgba(255,255,255,.0) 0%, rgba(255,255,255,.5) 60%, rgba(255,255,255,.0) 100%);
+      pointer-events:none;z-index:0;
+    }
+    .hero-content{position:relative;z-index:3;text-align:center}
+    .hero h1{font-size:clamp(28px,5vw,44px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff, 0 10px 28px rgba(255,60,154,.3)}
+    .hero .sub{display:block;margin-top:.25em;font-size:clamp(16px,3.4vw,22px);color:var(--muted);font-weight:700}
+    .hero p{color:var(--muted);max-width:780px;margin:12px auto 18px;line-height:1.85}
+    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .chip{background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow);font-size:14px}
+
+    /* Sticker row under hero */
+    .sticker-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:28px auto 4px;position:relative;z-index:2}
+    .sticker{background:#fff;border:1px solid #ffd4ea;border-radius:16px;padding:8px 12px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px}
+    .sticker img{width:46px;height:46px;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.1))}
+    .sticker span{font-weight:800;color:#ff2f93}
+
+    /* Floating characters (background) */
+    .floater{position:absolute;z-index:1;opacity:.95;filter:drop-shadow(0 14px 24px rgba(0,0,0,.15));animation:floatY 6s ease-in-out infinite alternate;pointer-events:none}
+    .floater.f1{left:8px;top:48px;transform:rotate(-8deg)}
+    .floater.f2{right:8px;top:36px;animation-delay:1s;transform:rotate(6deg)}
+    .floater.f3{left:8%;bottom:-8px;animation-delay:2s;transform:rotate(-4deg)}
+    .floater img{width:86px;height:auto}
+    @keyframes floatY{from{transform:translateY(0) rotate(var(--rot,0deg))} to{transform:translateY(-14px) rotate(var(--rot,0deg))}}
+    @media (prefers-reduced-motion: reduce){.floater{animation:none}}
+
+    section{padding:26px 0}
+    .grid{display:grid;gap:18px}
+    @media(min-width:860px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;backdrop-filter:saturate(130%) blur(6px)}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .badge{width:42px;height:42px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);flex:none}
+    h1,h2{margin:0 0 12px}
+    h2{font-size:22px}
+    .muted{color:var(--muted)}
+
+    /* Shots */
+    .shots-wrap{margin-top:12px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling: touch}
+    .shot-item{scroll-snap-align:center;flex:0 0 auto;width: clamp(240px, 28vw, 360px)}
+    .shot{width:100%;display:block;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+    .cap{text-align:center;font-size:.9rem;color:var(--muted);margin-top:6px}
+    .shots::-webkit-scrollbar{height:10px}
+    .shots::-webkit-scrollbar-thumb{background:#ffd0e8;border-radius:999px}
+    .shots::-webkit-scrollbar-track{background:#fff}
+
+    /* Characters */
+    .char-grid{display:grid;gap:16px;margin-top:14px}
+    @media(min-width:820px){.char-grid{grid-template-columns:repeat(3,1fr)}}
+    .char{position:relative;text-align:center}
+    .char .bubble{position:absolute;left:10px;top:10px;background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;color:#ff3c9a;box-shadow:var(--shadow)}
+    .char .figure{background:#fff;border:1px solid #ffe0ef;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+    .char img{width:min(240px,70%);max-width:280px;aspect-ratio:1/1;object-fit:contain;display:block;margin:0 auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12))}
+    .char h3{margin:10px 0 4px;font-size:18px}
+    .char p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Collage */
+    .collage{display:grid;gap:14px;align-items:center}
+    @media(min-width:860px){.collage{grid-template-columns:1fr 1fr}}
+    .polaroid{background:#fff;border:1px solid #ffe0ef;border-radius:18px;padding:10px 10px 16px;box-shadow:var(--shadow);text-align:center}
+    .polaroid img{width:220px;max-width:80%;aspect-ratio:1/1;object-fit:contain}
+    .polaroid .cap{font-weight:800;color:#ff2f93;margin-top:6px}
+
+    footer{text-align:center;color:var(--muted);padding:30px 0 50px}
+
+    /* Mobile safe margins */
+    @media (max-width: 560px){
+      .hero{padding:70px 14px 54px}
+      .floater img{width:70px}
+      .floater.f1{top:62px;left:12px}
+      .floater.f2{top:54px;right:12px}
+      .floater.f3{bottom:-6px;left:50%;transform:translateX(-50%) rotate(-4deg)}
+      .sticker-row{margin-top:30px}
+    }
+    @media (max-width: 400px){
+      .floater img{width:60px}
+      .floater.f1{left:10px;top:64px}
+      .floater.f2{right:10px;top:58px}
+      .hero h1{font-size:clamp(26px,7vw,36px)}
+    }
   </style>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"100pt Fighters Official Site",
+    "url":"https://naru717.github.io/100ptfighters-landing/en/",
+    "inLanguage":"en",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://naru717.github.io/100ptfighters-landing/en/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: VideoGame -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoGame",
+    "name":"100pt Fighters",
+    "url":"https://naru717.github.io/100ptfighters-landing/en/",
+    "image":"https://naru717.github.io/100ptfighters-landing/og.png",
+    "operatingSystem":"iOS",
+    "applicationCategory":"GameApplication",
+    "description":"Distribute 100 points to HP, Attack, Defense, and Speed to build your fighter. Cute but deep battle system with online matches, tournaments, and gacha.",
+    "author":{"@type":"Organization","name":"100pt Fighters"}
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is in-app purchase (Mamecoin) safe?","acceptedAnswer":{"@type":"Answer","text":"Yes. Payments are handled by Apple's In-App Purchase. We do not store your payment information."}},
+      {"@type":"Question","name":"Online matches won’t connect.","acceptedAnswer":{"@type":"Answer","text":"Depending on network conditions and time, it may be congested. We recommend Wi-Fi and closing heavy background apps."}},
+      {"@type":"Question","name":"I can't equip a skin.","acceptedAnswer":{"@type":"Answer","text":"After purchasing, go to Profile → Skin Selection to equip. If it doesn't reflect, please restart the app."}}
+    ]
+  }
+  </script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <a class="btn sub" href="../">日本語 / JP</a>
-      <a class="btn" href="YOUR_APP_STORE_LINK"> Download on the App Store</a>
+  <header>
+    <div class="nav container">
+      <div class="brand"><div class="logo" aria-hidden="true"></div><span>100pt Fighters</span></div>
+      <nav class="links" style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="#features">Features</a>
+        <a class="btn" href="#characters">Characters</a>
+        <a class="btn" href="#shots">Screenshots</a>
+        <a class="btn" href="#faq">FAQ</a>
+        <a class="btn store" href="YOUR_APP_STORE_LINK" aria-label="Download on the App Store">Download</a>
+        <!-- Switch back to Japanese -->
+        <a class="btn lang" href="../" hreflang="ja" aria-label="日本語サイトへ">日本語 / JP</a>
+      </nav>
     </div>
+  </header>
 
-    <h1>100pt Fighters — Official Site</h1>
-    <p>
-      Build your fighter by allocating <strong>100 points</strong> to HP, Attack, Defense, and Speed.
-      Enjoy cute characters, online battles, tournaments, and skins!
-    </p>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <!-- Floating characters (background; keep away from text) -->
+      <div class="floater f1" style="--rot:-8deg"><img src="../tomomin.png" alt="" aria-hidden="true"></div>
+      <div class="floater f2" style="--rot:6deg"><img src="../black.png" alt="" aria-hidden="true"></div>
+      <div class="floater f3" style="--rot:-4deg"><img src="../mamet.png" alt="" aria-hidden="true"></div>
 
-    <div class="chips">
-      <span class="chip">🌐 Online Battles</span>
-      <span class="chip">🏆 16-Player Tournament</span>
-      <span class="chip">🎲 Gacha & Skins</span>
-      <span class="chip">👥 2P Mode</span>
-    </div>
+      <div class="hero-content container">
+        <h1>
+          100pt Fighters — Official Website
+          <span class="sub">Cute × Strategy Battle Game</span>
+        </h1>
+        <p>
+          100pt Fighters is a cute yet strategic battle game.<br>
+          Allocate <strong>100 points</strong> to <em>HP / Attack / Defense / Speed</em> and build your unique fighter!
+        </p>
+        <div class="cta">
+          <a class="btn store" href="YOUR_APP_STORE_LINK"> Download on the App Store</a>
+          <a class="btn" href="#shots">See gameplay</a>
+        </div>
+        <div class="chips" aria-label="Highlights">
+          <div class="chip">🌐 Online Battles</div>
+          <div class="chip">🏆 16-Player Tournament</div>
+          <div class="chip">🎲 Gacha & Skins</div>
+          <div class="chip">👥 2P Versus Mode</div>
+        </div>
 
-    <p><a class="btn" href="YOUR_APP_STORE_LINK"> Get the App</a></p>
+        <!-- Sticker row -->
+        <div class="sticker-row" aria-label="Popular Characters">
+          <div class="sticker"><img src="../mamet.png" alt="Mamet - main character"><span>Mamet</span></div>
+          <div class="sticker"><img src="../tomomin.png" alt="Tomomin"><span>Tomomin</span></div>
+          <div class="sticker"><img src="../black.png" alt="Black Bean"><span>Black Bean</span></div>
+          <div class="sticker"><img src="../warashi.png" alt="Warashi"><span>Warashi</span></div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>
-        <a href="https://naru717.github.io/100ptfighters-support/" target="_blank" rel="noopener">Support</a> ·
-        <a href="https://naru717.github.io/100ptfighters-privacy/" target="_blank" rel="noopener">Privacy Policy</a>
-      </p>
+    <!-- Features -->
+    <section id="features" class="container">
+      <h2>Game Features</h2>
+      <div class="grid cols-3" style="margin-top:12px">
+        <div class="card feature">
+          <div class="badge">🎯</div>
+          <div>
+            <h3>100-Point Builds</h3>
+            <p class="muted">Distribute points freely. Combine with personality skills to discover your strongest build.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="badge">🌟</div>
+          <div>
+            <h3>Cute Skins</h3>
+            <p class="muted">Get skins via gacha or battles and dress up your favorite character for the tournament.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="badge">⚔️</div>
+          <div>
+            <h3>Online & Tournament</h3>
+            <p class="muted">Intense 16-player knock-out battles. Challenge rivals across Japan and beyond!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Characters -->
+    <section id="characters" class="container">
+      <h2>Characters</h2>
+      <div class="char-grid">
+        <div class="char card">
+          <div class="bubble">Hero Bean</div>
+          <div class="figure">
+            <img src="../mamet.png" alt="Mamet image">
+          </div>
+          <h3>Mamet</h3>
+          <p>Energetic challenger. Easy to play with balanced builds.</p>
+        </div>
+
+        <div class="char card">
+          <div class="bubble">Princess of Bean World</div>
+          <div class="figure">
+            <img src="../tomomin.png" alt="Tomomin image">
+          </div>
+          <h3>Tomomin</h3>
+          <p>A pop idol bean. Cute—but surprisingly strong!</p>
+        </div>
+
+        <div class="char card">
+          <div class="bubble">Dark Emperor</div>
+          <div class="figure">
+            <img src="../black.png" alt="Black Bean image">
+          </div>
+          <h3>Black Bean</h3>
+          <p>A fearsome foe with legendary aura. High-attack “glass cannon” builds are popular.</p>
+        </div>
+
+        <div class="char card">
+          <div class="bubble">Rare</div>
+          <div class="figure">
+            <img src="../densetu.png" alt="Legendary Bean image">
+          </div>
+          <h3>Legendary Bean</h3>
+          <p>Ultra-rare skin with dazzling effects that steal the spotlight.</p>
+        </div>
+
+        <div class="char card">
+          <div class="bubble">Yokai Series</div>
+          <div class="figure">
+            <img src="../warashi.png" alt="Warashi image">
+          </div>
+          <h3>Warashi</h3>
+          <p>A guardian spirit that brings protection. Great with defense/HP builds.</p>
+        </div>
+
+        <div class="char card">
+          <div class="bubble">Rewards</div>
+          <div class="collage">
+            <div class="polaroid">
+              <img src="../mamegacha.png" alt="Mame gacha image">
+              <div class="cap">🎲 Gacha</div>
+            </div>
+            <div class="polaroid">
+              <img src="../mametorofi.png" alt="Mame trophy image">
+              <div class="cap">🏆 Trophy</div>
+            </div>
+          </div>
+          <h3>Gacha & Trophy</h3>
+          <p class="muted">Collect skins, power up your favorite, and win the trophy!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="shots" class="container">
+      <h2>Screenshots</h2>
+      <p class="muted" style="margin:6px 0 14px">Swipe horizontally</p>
+      <div class="shots-wrap">
+        <div class="shots">
+          <figure class="shot-item">
+            <img class="shot" src="../shot1.png" alt="Title screen" loading="lazy" decoding="async">
+            <figcaption class="cap">Title</figcaption>
+          </figure>
+          <figure class="shot-item">
+            <img class="shot" src="../shot2.png" alt="Status allocation screen" loading="lazy" decoding="async">
+            <figcaption class="cap">Allocate Points</figcaption>
+          </figure>
+          <figure class="shot-item">
+            <img class="shot" src="../shot3.png" alt="Online battle screen" loading="lazy" decoding="async">
+            <figcaption class="cap">Online Battle</figcaption>
+          </figure>
+          <figure class="shot-item">
+            <img class="shot" src="../shot4.png" alt="Tournament bracket screen" loading="lazy" decoding="async">
+            <figcaption class="cap">Tournament</figcaption>
+          </figure>
+          <figure class="shot-item">
+            <img class="shot" src="../shot5.png" alt="Gacha screen" loading="lazy" decoding="async">
+            <figcaption class="cap">Gacha</figcaption>
+          </figure>
+          <figure class="shot-item">
+            <img class="shot" src="../shot6.png" alt="Final battle screen" loading="lazy" decoding="async">
+            <figcaption class="cap">Grand Final</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container">
+      <h2>FAQ</h2>
+      <div class="grid">
+        <details class="card">
+          <summary>Is in-app purchase (Mamecoin) safe?</summary>
+          <div class="muted" style="margin-top:10px">We use Apple's In-App Purchase. We do not store any payment information.</div>
+        </details>
+        <details class="card">
+          <summary>Online matches won’t connect.</summary>
+          <div class="muted" style="margin-top:10px">Try Wi-Fi and stop heavy background apps. It may be congested depending on your network or the time of day.</div>
+        </details>
+        <details class="card">
+          <summary>I can't equip a skin.</summary>
+          <div class="muted" style="margin-top:10px">After purchasing, go to “Profile → Skin Selection”. If not reflected, please restart the app.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container" style="text-align:center">
+      <div class="card" style="display:inline-block;padding:24px 28px">
+        <h2 style="margin:0 0 8px">Download Now</h2>
+        <p class="muted" style="margin:0 0 14px">Experience the cute × strategic battles!</p>
+        <a class="btn store" href="YOUR_APP_STORE_LINK"> App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:8px">
+        <a class="btn" href="https://naru717.github.io/100ptfighters-support/"
+           target="_blank" rel="noopener noreferrer"
+           style="background:#fff;color:#ff2f93">Support</a>
+
+        <a class="btn" href="https://naru717.github.io/100ptfighters-privacy/"
+           target="_blank" rel="noopener noreferrer"
+           style="background:#fff;color:#ff2f93">Privacy Policy</a>
+
+        <a class="btn" href="#shots">Screenshots</a>
+
+        <!-- Back to Japanese -->
+        <a class="btn lang" href="../" hreflang="ja" aria-label="Back to Japanese site (footer)">日本語 / JP</a>
+      </div>
       <small>© 2025 100pt Fighters</small>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for hash links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href').slice(1);
+        const el=document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}) }
+      });
+    });
+  </script>
 </body>
 </html>
