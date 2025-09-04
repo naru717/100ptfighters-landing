@@ -9,6 +9,10 @@
   <link rel="canonical" href="https://naru717.github.io/100ptfighters-landing/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
+  <!-- lang alternate（SEO） -->
+  <link rel="alternate" hreflang="ja" href="https://naru717.github.io/100ptfighters-landing/" />
+  <link rel="alternate" hreflang="en" href="https://naru717.github.io/100ptfighters-landing/en/" />
+
   <!-- OGP -->
   <meta property="og:title" content="100ポイントファイターズ | 100pt Fighters 公式サイト" />
   <meta property="og:description" content="かわいい豆キャラで100ポイントを振り分けて戦う！オンライン対戦・トーナメント・ガチャ対応のiPhoneゲームアプリ。" />
@@ -16,6 +20,8 @@
   <meta property="og:url" content="https://naru717.github.io/100ptfighters-landing/" />
   <meta property="og:image" content="og.png" />
   <meta property="og:site_name" content="100pt Fighters" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta name="theme-color" content="#ff6fb1" />
 
   <!-- Twitter Card -->
@@ -42,6 +48,7 @@
     .logo::after{content:"✨";position:absolute;inset:0;display:grid;place-items:center}
     .btn{display:inline-flex;align-items:center;gap:.5em;text-decoration:none;background:#fff;color:#ff2f93;font-weight:800;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow)}
     .btn.store{background:#000;color:#fff}
+    .btn.lang{background:#fff;color:#ff2f93}
 
     /* ===== Hero ===== */
     .hero{padding:64px 14px 42px;position:relative;overflow:hidden}
@@ -115,11 +122,9 @@
     /* ======= モバイル安全マージン（見切れ対策を強化） ======= */
     @media (max-width: 560px){
       .hero{padding:70px 14px 54px}
-      /* 端に寄りすぎないよう内側へ寄せる */
       .floater img{width:70px}
       .floater.f1{top:62px;left:12px}
       .floater.f2{top:54px;right:12px}
-      /* 下側は中央に寄せて左右余白を確保 */
       .floater.f3{bottom:-6px;left:50%;transform:translateX(-50%) rotate(-4deg)}
       .sticker-row{margin-top:30px}
     }
@@ -184,6 +189,8 @@
         <a class="btn" href="#shots">スクリーンショット</a>
         <a class="btn" href="#faq">FAQ</a>
         <a class="btn store" href="YOUR_APP_STORE_LINK" aria-label="App Store で入手">App Storeで入手</a>
+        <!-- ▼ 追加：英語版へ -->
+        <a class="btn lang" href="https://naru717.github.io/100ptfighters-landing/en/" hreflang="en" aria-label="Switch to English site">English</a>
       </nav>
     </div>
   </header>
@@ -396,11 +403,13 @@
          style="background:#fff;color:#ff2f93">プライバシーポリシー</a>
 
       <a class="btn" href="#shots">スクリーンショット</a>
+
+      <!-- ▼ 追加：フッターにも英語版リンク -->
+      <a class="btn lang" href="https://naru717.github.io/100ptfighters-landing/en/" hreflang="en" aria-label="Switch to English site (footer)">English</a>
     </div>
     <small>© 2025 100pt Fighters</small>
   </div>
 </footer>
-
 
   <script>
     // スムーススクロール
