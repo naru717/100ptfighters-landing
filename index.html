@@ -126,6 +126,14 @@
 
     footer{text-align:center;color:var(--muted);padding:30px 0 50px}
 
+    /* ===== ここから: 性格セクション用 追加CSS ===== */
+    .pill{display:inline-block;background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:6px 10px;font-weight:800;color:#ff2f93;box-shadow:var(--shadow)}
+    .two-col{columns:1}
+    @media(min-width:860px){.two-col{columns:2;column-gap:26px}}
+    .list-reset{list-style:none;padding:0;margin:0}
+    .list-reset li{break-inside:avoid;padding:8px 0;border-bottom:1px dashed #ffe0ef}
+    .list-reset li:last-child{border-bottom:none}
+
     /* ======= モバイル安全マージン（見切れ対策を強化） ======= */
     @media (max-width: 560px){
       .hero{padding:70px 14px 54px}
@@ -200,6 +208,7 @@
       <nav class="links" style="display:flex;gap:10px;flex-wrap:wrap">
         <a class="btn" href="#features">特徴</a>
         <a class="btn" href="#characters">キャラ</a>
+        <a class="btn" href="#personality">性格</a><!-- ★ 追加 -->
         <a class="btn" href="#shots">スクリーンショット</a>
         <a class="btn" href="#faq">FAQ</a>
         <a class="btn store" href="https://apps.apple.com/app/100pt-fighters/id6751428142" target="_blank" rel="noopener">
@@ -226,7 +235,7 @@
         </h1>
         <p>
           100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
-          「<strong>100ポイントファイターズ</strong>」「<strong>100pt</strong>」「<strong>100PT</strong>」「<strong>100ぽい</strong>」などの名前で親しまれています。<br>
+          「<strong>100ポイントファイターズ</strong>」「<strong>100pt</strong>」「<strong>100PT</strong>」「<strong>100ぽい</strong>」などで親しまれています。<br>
           100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！
         </p>
         <div class="cta">
@@ -345,6 +354,73 @@
           <h3>ガチャ & トロフィー</h3>
           <p class="muted">スキンを集めて推しを育成。大会で勝利して栄光のトロフィーをゲット！</p>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== Personality (NEW) ===== -->
+    <section id="personality" class="container">
+      <h2>性格（スキル）</h2>
+
+      <!-- 基本の4性格 -->
+      <div class="card" style="margin-top:12px">
+        <div class="pill" aria-hidden="true">基本</div>
+        <h3 style="margin-top:10px">4つの基本的な性格</h3>
+        <ul class="list-reset" style="margin-top:6px">
+          <li>・クール　：10%の確率でダメージ半減</li>
+          <li>・元気　　：5%の確率で追加攻撃</li>
+          <li>・まじめ　：5%の確率でHPを1回復</li>
+          <li>・やんちゃ：2%の確率でダメージ3倍の強打</li>
+        </ul>
+        <p class="muted" style="margin-top:8px">※ 性格はバトル中に自動で判定されます。ビルドや戦術との組み合わせが勝負のカギ！</p>
+      </div>
+
+      <!-- 性格もちのスペシャルキャラ一覧 -->
+      <div class="card" style="margin-top:16px">
+        <div class="pill" aria-hidden="true">スペシャル</div>
+        <h3 style="margin-top:10px">性格（スキル）を“持っている”キャラ</h3>
+        <p class="muted" style="margin:6px 0 12px">一部のスキン／キャラには固有の性格が設定されています。</p>
+
+        <div class="two-col">
+          <ul class="list-reset">
+            <li><strong>bakuchin</strong>：<em>いちかバチか</em>… 1%の確率でダメージ4倍（攻撃時）</li>
+            <li><strong>chiemaru</strong>：<em>かしこ</em>… 20%の確率でダメージ20%減（被弾時）</li>
+            <li><strong>chirimame</strong>：<em>せっかち</em>… 15%の確率で与ダメ+2（攻撃時）</li>
+            <li><strong>dongu</strong>：<em>がんこ</em>… 3%の確率で攻撃を完全無効化（被弾時）</li>
+            <li><strong>uomame</strong>：<em>あつい</em>… 3%の確率で防御無視（攻撃時）</li>
+            <li><strong>jingu</strong>：<em>かみだのみ</em>… 2.5%の確率でHP+2（攻撃ターン開始時）</li>
+            <li><strong>kendo</strong>：<em>のんき</em>… 25%の確率でダメージ-1（被弾時）</li>
+            <li><strong>kinomame</strong>：<em>ふしぎ</em>… 8%の確率で与ダメ1.25倍（攻撃時）</li>
+            <li><strong>kukkun</strong>：<em>ツンデレ</em>… 4%の確率で相手に5ダメ反撃（被弾時）</li>
+            <li><strong>mahohon</strong>：<em>やさしい</em>… 1%の確率でHP+5（ターン開始時）</li>
+            <li><strong>mamebura</strong>：<em>きまぐれ</em>… HP50%以下で5%の確率で与ダメ3倍（攻撃時）</li>
+            <li><strong>mameikka</strong>：<em>なかよし</em>… 20%の確率で与ダメ+1（攻撃時）</li>
+            <li><strong>mamorun</strong>：<em>しんぼう</em>… 10%の確率でダメージ-2（被弾時）</li>
+            <li><strong>mitorin</strong>：<em>ナースケア</em>… HP50%以下のとき3%でHP+5</li>
+            <li><strong>mokkuru</strong>：<em>おおらか</em>… 4%の確率でHP+1～2（被弾時）</li>
+            <li><strong>namu</strong>：<em>ありがたや</em>… 戦闘開始時にランダムで攻撃+1 / 防御+1 / 素早さ+5</li>
+            <li><strong>nebarin</strong>：<em>しぶとい</em>… 20%の確率でHP1で踏みとどまる（致死ダメ時）</li>
+            <li><strong>okaka</strong>：<em>かんよう</em>… 毎ターン開始時3%でHP+1〜3</li>
+            <li><strong>ottori</strong>：<em>のんびり</em>… 常時防御+2（常時効果）</li>
+            <li><strong>paisen</strong>：<em>あつがり</em>… 10%の確率で「次の攻撃のみ」攻撃力+3（攻撃後）</li>
+            <li><strong>piyomaru</strong>：<em>いそがし屋</em>… 被弾後10%の確率ですばやさ+5（次の行動まで）</li>
+            <li><strong>shimame</strong>：<em>オシャレ</em>… 5%の確率で相手の防御-3（そのターン｜攻撃時）</li>
+            <li><strong>siratama</strong>：<em>もっちり</em>… 5%の確率で受けたダメージを1にする（被弾時）</li>
+            <li><strong>tomaton</strong>：<em>すっぱい</em>… 4%の確率で相手の防御半減（この一撃）</li>
+            <li><strong>ururun</strong>：<em>なきむし</em>… HP25%以下で5%の確率で与ダメ+4（攻撃時）</li>
+            <li><strong>tomomin</strong>：<em>おひめさま</em>… 25%の確率でダメージ15%減（被弾時）</li>
+            <li><strong>brack</strong>：<em>あんこく</em>… 7%の確率で『攻撃+5(この一撃) or 相手防御-3(このターン) or 自傷1』</li>
+            <li><strong>master</strong>：<em>ダンディ</em>… 戦闘開始時に攻撃+2 または 防御+2（ランダム）</li>
+            <li><strong>mikomame</strong>：<em>おみくじ</em>… 5%の確率でHP+0 or +2（攻撃時）</li>
+            <li><strong>ontama</strong>：<em>ぽかぽか</em>… 6%の確率で自分HP+2 と相手もHP+1</li>
+            <li><strong>mame</strong>：<em>ゆうき</em>… HP50%以下で攻撃+3（常時判定）</li>
+            <li><strong>mamekyu</strong>：<em>ぷにぷに</em>… 10%の確率で与ダメ+3（攻撃時）</li>
+            <li><strong>kashiwa</strong>：<em>なかよし魂</em>… 5%の確率で『与ダメ1.8倍 or 自傷1』（攻撃時ランダム）</li>
+            <li><strong>mamemiya</strong>：<em>めがみ</em>… 2%の確率でHP+2＆与ダメ+1（そのターン｜ターン開始時）</li>
+            <li><strong>brack2</strong>：<em>暗黒おーら</em>… 5%の確率で『攻撃+7(この一撃) or 素早さ+7(このターン) or 自傷3』（ターン開始時ランダム）</li>
+            <li><strong>densetu</strong>：<em>でんせつ</em>… 8%で発動：『伝説のチョップ(大ダメージ)40%』or『伝説のギャグ(ややすべり自傷2 or すべった自傷5)60%』</li>
+          </ul>
+        </div>
+        <p class="muted" style="margin-top:12px">※ 表示の確率・効果は調整で今後変更になることがあります。</p>
       </div>
     </section>
 
