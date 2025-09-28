@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="google-site-verification" content="twghUBokJapkR6vig23kvCT2iS7OdwHsD4QkCsrAyYc" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-
   <title>100ポイントファイターズ（100pt/100ぽい）| 100pt Fighters 公式サイト</title>
-  <meta name="description" content="100ポイントファイターズ（100pt Fighters）は、かわいい豆キャラで100ポイントを振り分けて戦う戦略バトルゲーム！「100ぽい」「100pt」などで検索して見つかる、オンライン対戦・トーナメント・ガチャ対応のiPhoneアプリ。マメット・ブラックビーン・ともみん・わらしべなど個性豊かなキャラで頂点を目指そう。" />
-  <meta name="keywords" content="100ポイントファイターズ,100pt Fighters,100pt,100PT,100ぽい,100ポイ,ひゃくぽい,公式サイト,ゲーム,iPhone,オンライン対戦,トーナメント,ガチャ,スキン,マメット,ブラックビーン,ともみん,わらしべ,2P対戦" />
+  <meta name="description" content="100ポイントを振り分けて戦う戦略バトル。オンライン対戦・トーナメント・ガチャ対応のiPhoneアプリ『100pt Fighters』公式サイト。" />
   <link rel="canonical" href="https://naru717.github.io/100ptfighters-landing/" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#ff6fb1" />
 
-  <!-- hreflang -->
-  <link rel="alternate" hreflang="ja" href="https://naru717.github.io/100ptfighters-landing/" />
-  <link rel="alternate" hreflang="en" href="https://naru717.github.io/100ptfighters-landing/en/" />
-
-  <!-- OGP / X -->
-  <meta property="og:title" content="100ポイントファイターズ（100pt/100ぽい）| 100pt Fighters 公式サイト" />
-  <meta property="og:description" content="かわいい豆キャラで100ポイントを振り分けて戦う！オンライン対戦・トーナメント・ガチャ対応のiPhoneゲームアプリ。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://naru717.github.io/100ptfighters-landing/" />
-  <meta property="og:image" content="https://naru717.github.io/100ptfighters-landing/og.png" />
-  <meta property="og:site_name" content="100pt Fighters" />
-  <meta property="og:locale" content="ja_JP" />
-  <meta property="og:locale:alternate" content="en_US" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="100ポイントファイターズ（100pt/100ぽい）| 100pt Fighters 公式サイト" />
-  <meta name="twitter:description" content="かわいい×戦略。100ポイントを振り分けて戦う新感覚バトル！" />
-  <meta name="twitter:image" content="https://naru717.github.io/100ptfighters-landing/og.png" />
-
   <style>
-    :root{
-      --pink:#ff6fb1; --ink:#2a2a2a; --muted:#666;
-      --bg1:#fff3f9; --bg2:#f4fbff; --card:#ffffffcc; --shadow:0 10px 30px rgba(0,0,0,.12);
-      --radius:20px;
-    }
+    :root{--pink:#ff6fb1;--ink:#2a2a2a;--muted:#666;--bg1:#fff3f9;--bg2:#f4fbff;--card:#ffffffcc;--shadow:0 10px 30px rgba(0,0,0,.12);--radius:20px}
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;color:var(--ink);font-family:"Hiragino Maru Gothic ProN",system-ui,-apple-system,"Noto Sans JP",sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2))}
+    body{margin:0;color:var(--ink);font-family:"Hiragino Maru Gothic ProN",system-ui,-apple-system,"Noto Sans JP",sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2))}
     a{color:var(--pink);text-decoration:none}
     img{max-width:100%;height:auto}
     .container{max-width:1100px;margin:0 auto;padding:20px 16px}
 
-    /* --- ヘッダー（圧縮＆段組み） --- */
+    /* 圧縮ヘッダー（段組み） */
     header{position:sticky;top:0;z-index:50;background:#fffafcbd;backdrop-filter:saturate(130%) blur(6px);border-bottom:1px solid #ffd6ea}
     .nav-compact{display:grid;gap:6px;align-items:center}
     .brand-row{display:flex;align-items:center;gap:10px;min-height:40px}
-    .brand .logo{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 35%, #ffd7ea 36% 100%);box-shadow:inset 0 -2px 6px rgba(0,0,0,.12);display:inline-block}
+    .logo{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 35%, #ffd7ea 36% 100%);box-shadow:inset 0 -2px 6px rgba(0,0,0,.12)}
     .brand-name{font-weight:900}
+    .row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;background:#fff;color:#ff2f93;font-weight:800;border:1px solid #ffd4ea;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow)}
     .btn.store{background:#000;color:#fff;border-color:#000}
-    .row{display:flex;flex-wrap:wrap;gap:8px}
-    .row.center{justify-content:center}
 
-    /* --- ヒーロー --- */
+    /* ヒーロー */
     .hero{padding:48px 14px 36px;position:relative;overflow:hidden}
-    .hero-content{position:relative;z-index:3;text-align:center}
-    .hero h1{font-size:clamp(26px,5vw,42px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff, 0 10px 28px rgba(255,60,154,.25)}
+    .hero-content{text-align:center}
+    .hero h1{font-size:clamp(26px,5vw,42px);margin:0;color:#ff3c9a;text-shadow:0 3px 0 #fff,0 10px 28px rgba(255,60,154,.25)}
     .hero .sub{display:block;margin-top:.25em;font-size:clamp(15px,3.4vw,20px);color:var(--muted);font-weight:700}
     .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
     .chip{background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:6px 10px;box-shadow:var(--shadow);font-size:14px}
@@ -65,35 +38,37 @@
     .floater.f2{right:8px;top:28px;transform:rotate(6deg);animation-delay:1s}
     .floater.f3{left:8%;bottom:-8px;transform:rotate(-4deg);animation-delay:2s}
     .floater img{width:80px}
-    @keyframes floatY{from{transform:translateY(0) rotate(var(--rot,0deg))} to{transform:translateY(-12px) rotate(var(--rot,0deg))}}
+    @keyframes floatY{from{transform:translateY(0)} to{transform:translateY(-12px)}}
 
     section{padding:24px 0}
     .grid{display:grid;gap:18px}
-    @media(min-width:860px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:860px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
     .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;backdrop-filter:saturate(130%) blur(6px)}
     .feature{display:flex;gap:12px;align-items:flex-start}
-    .badge{width:40px;height:40px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);flex:none}
-    h1,h2{margin:0 0 12px}
-    h2{font-size:22px}
-    .muted{color:var(--muted)}
+    .badge{width:40px;height:40px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow)}
 
-    /* スクショ */
-    .shots-wrap{margin-top:12px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:16px}
-    .shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling: touch}
-    .shot-item{scroll-snap-align:center;flex:0 0 auto;width: clamp(240px, 28vw, 360px)}
-    .shot{width:100%;display:block;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
-    .cap{text-align:center;font-size:.9rem;color:var(--muted);margin-top:6px}
-
-    /* キャラ紹介 */
+    /* キャラ */
     .char-grid{display:grid;gap:16px;margin-top:14px}
     @media(min-width:820px){.char-grid{grid-template-columns:repeat(3,1fr)}}
-    .char{position:relative;text-align:center}
+    .char{text-align:center;position:relative}
     .char .bubble{position:absolute;left:10px;top:10px;background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;color:#ff3c9a;box-shadow:var(--shadow)}
-    .char .figure{background:#fff;border:1px solid #ffe0ef;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+    .figure{background:#fff;border:1px solid #ffe0ef;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
     .char img{width:min(240px,70%);max-width:280px;aspect-ratio:1/1;object-fit:contain;display:block;margin:0 auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12))}
     .char h3{margin:10px 0 4px;font-size:18px}
     .char p{margin:0;color:var(--muted);font-size:14px}
     .pill{display:inline-block;background:#fff;border:1px solid #ffd4ea;border-radius:999px;padding:4px 8px;font-weight:800;color:#ff2f93;box-shadow:var(--shadow);font-size:12px}
+
+    /* スクショ */
+    .shots-wrap{margin-top:12px;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .shots{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+    .shot-item{scroll-snap-align:center;flex:0 0 auto;width:clamp(240px,28vw,360px)}
+    .shot{width:100%;display:block;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+    .cap{text-align:center;font-size:.9rem;color:var(--muted);margin-top:6px}
+
+    /* ガチャタグ最前面 */
+    .polaroid{background:#fff;border:1px solid #ffe0ef;border-radius:18px;padding:10px 10px 16px;box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden}
+    .tag-overlay{position:absolute;top:8px;left:8px;z-index:5;background:#ff2f93;color:#fff;font-weight:900;border-radius:999px;padding:6px 10px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+    .tag-overlay[aria-label="gacha"]::before{content:"🎲 ";}
 
     /* 性格セクション */
     .two-col{columns:1}
@@ -103,173 +78,105 @@
     .list-reset li:last-child{border-bottom:none}
 
     footer{text-align:center;color:var(--muted);padding:30px 0 50px}
-
-    /* モバイル微調整 */
-    @media (max-width:560px){
-      .hero{padding:56px 14px 34px}
-      .floater img{width:64px}
-    }
   </style>
-
-  <!-- 構造化データ（既存のまま） -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"100ポイントファイターズ 公式サイト","url":"https://naru717.github.io/100ptfighters-landing/","alternateName":["100pt Fighters","100ポイントファイターズ","100pt","100PT","100ぽい"],"potentialAction":{"@type":"SearchAction","target":"https://naru717.github.io/100ptfighters-landing/?q={search_term_string}","query-input":"required name=search_term_string"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"VideoGame","name":"100ポイントファイターズ (100pt Fighters)","alternateName":["100ポイントファイターズ","100pt","100PT","100ぽい"],"url":"https://naru717.github.io/100ptfighters-landing/","image":"https://naru717.github.io/100ptfighters-landing/og.png","operatingSystem":"iOS","applicationCategory":"GameApplication","description":"100ポイントを振り分けて戦うシンプルだけど奥深いバトルゲーム。オンライン対戦・トーナメント・ガチャ対応。","author":{"@type":"Organization","name":"100pt Fighters"},"sameAs":["https://apps.apple.com/app/100pt-fighters/id6751428142"]}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"課金（まめコイン）は安全ですか？","acceptedAnswer":{"@type":"Answer","text":"Appleの決済システム（App内課金）を利用しています。支払い情報は開発者側で保持しません。"}},
-    {"@type":"Question","name":"オンライン対戦がつながりにくい","acceptedAnswer":{"@type":"Answer","text":"通信状況や時間帯により混雑する場合があります。Wi-Fi推奨・バックグラウンド通信の停止をお試しください。"}},
-    {"@type":"Question","name":"スキンが装備できない","acceptedAnswer":{"@type":"Answer","text":"購入後に「プロフィール → スキン選択」から装備可能です。反映されない場合はアプリ再起動をお試しください。"}}
-  ]}
-  </script>
 </head>
 
 <body>
-  <!-- ===== 圧縮ヘッダー（段組みナビ） ===== -->
+  <!-- ヘッダー：上 段組み -->
   <header>
     <div class="container nav-compact">
       <div class="brand-row">
-        <span class="brand">
-          <span class="logo" aria-hidden="true"></span>
-          <span class="brand-name">100pt Fighters</span>
-        </span>
+        <span class="logo" aria-hidden="true"></span><span class="brand-name">100pt Fighters</span>
       </div>
-      <!-- 上：特徴・キャラ・性格 -->
-      <div class="row center">
+      <div class="row">
         <a class="btn" href="#features">特徴</a>
         <a class="btn" href="#characters">キャラ</a>
         <a class="btn" href="#personality">性格</a>
       </div>
-      <!-- 中：スクリーンショット -->
-      <div class="row center">
-        <a class="btn" href="#shots">スクリーンショット</a>
-      </div>
-      <!-- 下：FAQ・English -->
-      <div class="row center">
-        <a class="btn" href="#faq">FAQ</a>
-        <a class="btn" href="https://naru717.github.io/100ptfighters-landing/en/" hreflang="en" aria-label="Switch to English site">English</a>
-      </div>
-      <!-- 最下段：App Store -->
-      <div class="row center">
-        <a class="btn store" href="https://apps.apple.com/app/100pt-fighters/id6751428142" target="_blank" rel="noopener"> App Store で入手</a>
-      </div>
+      <div class="row"><a class="btn" href="#shots">スクリーンショット</a></div>
+      <div class="row"><a class="btn" href="#faq">FAQ</a><a class="btn" href="https://naru717.github.io/100ptfighters-landing/en/" hreflang="en">English</a></div>
+      <div class="row"><a class="btn store" href="https://apps.apple.com/app/100pt-fighters/id6751428142" target="_blank" rel="noopener"> App Store で入手</a></div>
     </div>
   </header>
 
   <main>
-    <!-- ===== Hero ===== -->
+    <!-- ヒーロー -->
     <section class="hero">
-      <div class="floater f1" style="--rot:-8deg"><img src="tomomin.png" alt="" aria-hidden="true"></div>
-      <div class="floater f2" style="--rot:6deg"><img src="black.png" alt="" aria-hidden="true"></div>
-      <div class="floater f3" style="--rot:-4deg"><img src="mamet.png" alt="" aria-hidden="true"></div>
-
+      <div class="floater f1"><img src="tomomin.png" alt="" aria-hidden="true"></div>
+      <div class="floater f2"><img src="black.png" alt="" aria-hidden="true"></div>
+      <div class="floater f3"><img src="mamet.png" alt="" aria-hidden="true"></div>
       <div class="hero-content container">
-        <h1>100ポイントファイターズ（100pt/100ぽい）公式サイト
-          <span class="sub">かわいい×戦略の新感覚バトル</span>
-        </h1>
-        <p class="muted" style="max-width:820px;margin:10px auto 0;line-height:1.9">
-          100pt Fighters は、かわいいキャラクターで戦うシンプルだけど奥が深いバトルゲーム。<br>
-          100ポイントを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！
-        </p>
-        <div class="chips" aria-label="特徴">
-          <div class="chip">🌐 オンライン対戦</div>
-          <div class="chip">🏆 16人トーナメント</div>
-          <div class="chip">🎲 ガチャ＆スキン</div>
-          <div class="chip">👥 2P対戦モード</div>
-        </div>
+        <h1>100ポイントファイターズ（100pt/100ぽい）公式サイト<span class="sub">かわいい×戦略の新感覚バトル</span></h1>
+        <p class="muted" style="max-width:820px;margin:10px auto 0;line-height:1.9">100ptを「たいりょく・こうげき・ぼうぎょ・すばやさ」に配分して、自分だけのファイターを育成しよう！</p>
+        <div class="chips"><span class="chip">🌐 オンライン対戦</span><span class="chip">🏆 16人トーナメント</span><span class="chip">🎲 ガチャ＆スキン</span><span class="chip">👥 2P対戦モード</span></div>
       </div>
     </section>
 
-    <!-- ===== Features ===== -->
+    <!-- 特徴 -->
     <section id="features" class="container">
       <h2>ゲームの特徴</h2>
       <div class="grid cols-3" style="margin-top:12px">
-        <div class="card feature">
-          <div class="badge">🎯</div>
-          <div>
-            <h3>100ptの配分が勝負</h3>
-            <p class="muted">たいりょく/こうげき/ぼうぎょ/すばやさを自由に配分。性格スキルと組み合わせて最強ビルドを見つけよう。</p>
-          </div>
-        </div>
-        <div class="card feature">
-          <div class="badge">🌟</div>
-          <div>
-            <h3>かわいいスキン</h3>
-            <p class="muted">ガチャやバトルでスキンを入手＆着せ替え。推しキャラでトーナメントに挑戦！</p>
-          </div>
-        </div>
-        <div class="card feature">
-          <div class="badge">⚔️</div>
-          <div>
-            <h3>オンライン＆トーナメント</h3>
-            <p class="muted">16人勝ち抜きの白熱バトル！オンライン対戦で全国のライバルに挑め。</p>
-          </div>
-        </div>
+        <div class="card feature"><div class="badge">🎯</div><div><h3>100ptの配分が勝負</h3><p class="muted">たいりょく/こうげき/ぼうぎょ/すばやさを自由に配分。性格スキルと組み合わせて最強ビルドを目指そう。</p></div></div>
+        <div class="card feature"><div class="badge">🌟</div><div><h3>かわいいスキン</h3><p class="muted">ガチャやバトルでスキン入手＆着せ替え。推しキャラでトーナメントに挑戦！</p></div></div>
+        <div class="card feature"><div class="badge">⚔️</div><div><h3>オンライン＆トーナメント</h3><p class="muted">16人勝ち抜きの白熱バトル！全国のライバルに挑め。</p></div></div>
       </div>
     </section>
 
-    <!-- ===== Characters ===== -->
+    <!-- キャラ -->
     <section id="characters" class="container">
       <h2>キャラ紹介</h2>
       <div class="char-grid">
-        <!-- Mamet -->
+        <!-- マメット（性格 追加） -->
         <div class="char card">
           <div class="bubble">まめ主人公</div>
-          <div class="figure">
-            <img src="mamet.png" alt="100ポイントファイターズの主人公キャラ：マメット 画像">
-          </div>
+          <div class="figure"><img src="mamet.png" alt="マメット 画像"></div>
           <h3>マメット</h3>
-          <p>元気いっぱいのチャレンジャー。バランス型の配分で戦いやすい！</p>
+          <p><span class="pill">性格：ゆうき</span>　HP50%以下で攻撃+3（常時判定）</p>
         </div>
-        <!-- Tomomin (性格追記) -->
+
+        <!-- ともみん（維持） -->
         <div class="char card">
           <div class="bubble">まめかいのお姫様</div>
-          <div class="figure">
-            <img src="tomomin.png" alt="100pt Fighters の人気キャラ：ともみん 画像">
-          </div>
+          <div class="figure"><img src="tomomin.png" alt="ともみん 画像"></div>
           <h3>ともみん</h3>
-          <p><span class="pill">性格：おひめさま</span>　被弾時に25%の確率で受けるダメージを15%カット。</p>
+          <p><span class="pill">性格：おひめさま</span>　被弾時25%で被ダメ15%カット</p>
         </div>
-        <!-- Black Bean (性格追記) -->
+
+        <!-- ブラックビーン（維持） -->
         <div class="char card">
           <div class="bubble">まめかいの暗黒帝王</div>
-          <div class="figure">
-            <img src="black.png" alt="暗黒帝王 ブラックビーン（100ポイントファイターズ） 画像">
-          </div>
+          <div class="figure"><img src="black.png" alt="ブラックビーン 画像"></div>
           <h3>ブラックビーン</h3>
-          <p><span class="pill">性格：あんこく</span>　7%で「攻撃+5（この一撃）」or「相手防御-3（このターン）」or「自傷1」のランダム効果。</p>
+          <p><span class="pill">性格：あんこく</span>　7%で「攻撃+5（この一撃）/ 相手防御-3（このターン）/ 自傷1」</p>
         </div>
-        <!-- Densetu -->
+
+        <!-- 伝説のまめ（性格 追加） -->
         <div class="char card">
           <div class="bubble">レア</div>
-          <div class="figure">
-            <img src="densetu.png" alt="伝説のまめ（100pt Fighters レアスキン） 画像">
-          </div>
+          <div class="figure"><img src="densetu.png" alt="伝説のまめ 画像"></div>
           <h3>伝説のまめ</h3>
-          <p>超希少スキン。眩いエフェクトで会場の視線を独り占め！</p>
+          <p><span class="pill">性格：でんせつ</span>　8%で「伝説のチョップ(大) / 伝説のギャグ(自傷2〜5)」</p>
         </div>
-        <!-- Warashi -> Warashibe（性格なし） -->
+
+        <!-- わらしべ（性格なし） -->
         <div class="char card">
           <div class="bubble">ガチャ限定</div>
-          <div class="figure">
-            <img src="warashi.png" alt="わらしべ（100pt Fighters 可愛いキャラ） 画像">
-          </div>
+          <div class="figure"><img src="warashi.png" alt="わらしべ 画像"></div>
           <h3>わらしべ</h3>
-          <p>ガチャでゲットできる可愛いキャラ。性格スキルは持たないけど見た目がキュート！</p>
+          <p>ガチャでゲットできる可愛いキャラ。性格スキルは持たないよ。</p>
         </div>
-        <!-- Gacha & Trophy collage -->
+
+        <!-- ガチャ＆トロフィー（ガチャラベル最前面） -->
         <div class="char card">
           <div class="bubble">ごほうび</div>
-          <div class="collage">
-            <div class="card" style="text-align:center">
-              <img src="mamegacha.png" alt="まめガチャ（100pt Fighters ガチャ） 画像" style="width:220px;max-width:80%;aspect-ratio:1/1;object-fit:contain">
-              <div class="cap">🎲 ガチャ</div>
+          <div class="grid cols-2" style="align-items:center">
+            <div class="polaroid">
+              <span class="tag-overlay" aria-label="gacha">ガチャ</span>
+              <img src="mamegacha.png" alt="まめガチャ 画像" style="width:220px;max-width:80%;aspect-ratio:1/1;object-fit:contain">
+              <div class="cap">引いて集めよう！</div>
             </div>
-            <div class="card" style="text-align:center">
-              <img src="mametorofi.png" alt="マメトロフィー（100pt Fighters トロフィー） 画像" style="width:220px;max-width:80%;aspect-ratio:1/1;object-fit:contain">
+            <div class="polaroid">
+              <img src="mametorofi.png" alt="マメトロフィー 画像" style="width:220px;max-width:80%;aspect-ratio:1/1;object-fit:contain">
               <div class="cap">🏆 トロフィー</div>
             </div>
           </div>
@@ -279,11 +186,11 @@
       </div>
     </section>
 
-    <!-- ===== Personality ===== -->
+    <!-- 性格 -->
     <section id="personality" class="container">
       <h2>性格（スキル）</h2>
 
-      <!-- 基本の4性格 -->
+      <!-- 基本4 -->
       <div class="card" style="margin-top:12px">
         <h3 style="margin:0 0 6px">4つの基本的な性格</h3>
         <ul class="list-reset" style="margin-top:6px">
@@ -292,10 +199,9 @@
           <li>・まじめ　：5%の確率でHPを1回復</li>
           <li>・やんちゃ：2%の確率でダメージ3倍の強打</li>
         </ul>
-        <p class="muted" style="margin-top:8px">※ バトル中に自動判定。ビルドや戦術と合わせて発動を狙おう！</p>
       </div>
 
-      <!-- “他にもこんな性格があるよ”（名前なし一覧） -->
+      <!-- 他にも（10個だけ表示） -->
       <div class="card" style="margin-top:16px">
         <h3 style="margin:0 0 6px">他にもこんな性格があるよ。君はどの性格を選ぶ？</h3>
         <div class="two-col">
@@ -305,94 +211,44 @@
             <li>・せっかち … 15%で与ダメ+2（攻撃時）</li>
             <li>・がんこ … 3%で攻撃を完全無効化（被弾時）</li>
             <li>・あつい … 3%で防御無視（攻撃時）</li>
-            <li>・かみだのみ … 2.5%でHP+2（攻撃ターン開始時）</li>
-            <li>・のんき … 25%でダメージ-1（被弾時）</li>
-            <li>・ふしぎ … 8%で与ダメ1.25倍（攻撃時）</li>
-            <li>・ツンデレ … 4%で相手に5ダメ反撃（被弾時）</li>
-            <li>・やさしい … 1%でHP+5（ターン開始時）</li>
-            <li>・きまぐれ … HP50%以下で5%で与ダメ3倍（攻撃時）</li>
-            <li>・なかよし … 20%で与ダメ+1（攻撃時）</li>
-            <li>・しんぼう … 10%でダメージ-2（被弾時）</li>
-            <li>・ナースケア … HP50%以下のとき3%でHP+5</li>
-            <li>・おおらか … 4%でHP+1〜2（被弾時）</li>
-            <li>・ありがたや … 開幕で攻撃+1/防御+1/素早さ+5のいずれか</li>
             <li>・しぶとい … 20%でHP1で踏みとどまる（致死ダメ時）</li>
-            <li>・かんよう … 毎ターン3%でHP+1〜3（ターン開始時）</li>
             <li>・のんびり … 常時 防御+2</li>
-            <li>・あつがり … 10%で「次の攻撃のみ」攻撃+3（攻撃後）</li>
-            <li>・いそがし屋 … 被弾後10%ですばやさ+5（次の行動まで）</li>
-            <li>・オシャレ … 5%で相手の防御-3（そのターン｜攻撃時）</li>
-            <li>・もっちり … 5%でその一撃の被ダメを1に（被弾時）</li>
-            <li>・すっぱい … 4%で相手の防御半減（この一撃）</li>
-            <li>・なきむし … HP25%以下で5%で与ダメ+4（攻撃時）</li>
-            <li>・おみくじ … 5%でHP+0 or +2（攻撃時）</li>
-            <li>・ぽかぽか … 6%で自分HP+2＆相手HP+1</li>
-            <li>・ゆうき … HP50%以下で攻撃+3（常時判定）</li>
-            <li>・ぷにぷに … 10%で与ダメ+3（攻撃時）</li>
-            <li>・なかよし魂 … 5%で「与ダメ1.8倍 or 自傷1」（攻撃時ランダム）</li>
-            <li>・めがみ … 2%でHP+2＆与ダメ+1（そのターン｜ターン開始時）</li>
-            <li>・暗黒おーら … 5%で「攻撃+7/素早さ+7/自傷3」（ターン開始時ランダム）</li>
-            <li>・でんせつ … 8%で「伝説のチョップ(大)40% / 伝説のギャグ(自傷2~5)60%」</li>
+            <li>・かんよう … 毎ターン3%でHP+1〜3（ターン開始時）</li>
+            <li>・めがみ … 2%でHP+2＆与ダメ+1（そのターン）</li>
+            <li>・暗黒おーら … 5%で「攻撃+7 / 素早さ+7 / 自傷3」（ターン開始時ランダム）</li>
           </ul>
         </div>
-        <p class="muted" style="margin-top:12px">※ 表示の確率・効果は調整で今後変更になることがあります。</p>
+        <p class="muted" style="margin-top:10px">…まだまだあるよ！アップデートで順次追加/調整予定。</p>
       </div>
     </section>
 
-    <!-- ===== Screenshots ===== -->
+    <!-- スクショ -->
     <section id="shots" class="container">
       <h2>スクリーンショット</h2>
       <p class="muted" style="margin:6px 0 14px">横にスクロールできます</p>
       <div class="shots-wrap">
         <div class="shots">
-          <figure class="shot-item">
-            <img class="shot" src="shot1.png" alt="100ポイントファイターズ タイトル画面 スクリーンショット" loading="lazy" decoding="async">
-            <figcaption class="cap">タイトル</figcaption>
-          </figure>
-          <figure class="shot-item">
-            <img class="shot" src="shot2.png" alt="100pt Fighters ステータス振り分け 画面" loading="lazy" decoding="async">
-            <figcaption class="cap">ステータス振り分け</figcaption>
-          </figure>
-          <figure class="shot-item">
-            <img class="shot" src="shot3.png" alt="100pt Fighters オンラインバトル 画面" loading="lazy" decoding="async">
-            <figcaption class="cap">オンラインバトル</figcaption>
-          </figure>
-          <figure class="shot-item">
-            <img class="shot" src="shot4.png" alt="100ポイントファイターズ トーナメント 画面" loading="lazy" decoding="async">
-            <figcaption class="cap">トーナメント</figcaption>
-          </figure>
-          <figure class="shot-item">
-            <img class="shot" src="shot5.png" alt="100pt Fighters ガチャ 画面" loading="lazy" decoding="async">
-            <figcaption class="cap">ガチャ</figcaption>
-          </figure>
-          <figure class="shot-item">
-            <img class="shot" src="shot6.png" alt="100pt Fighters 決勝戦 画面" loading="lazy" decoding="async">
-            <figcaption class="cap">決勝戦</figcaption>
-          </figure>
+          <figure class="shot-item"><img class="shot" src="shot1.png" alt="タイトル画面"><figcaption class="cap">タイトル</figcaption></figure>
+          <figure class="shot-item"><img class="shot" src="shot2.png" alt="ステータス振り分け"><figcaption class="cap">ステータス振り分け</figcaption></figure>
+          <figure class="shot-item"><img class="shot" src="shot3.png" alt="オンラインバトル"><figcaption class="cap">オンラインバトル</figcaption></figure>
+          <figure class="shot-item"><img class="shot" src="shot4.png" alt="トーナメント"><figcaption class="cap">トーナメント</figcaption></figure>
+          <figure class="shot-item"><img class="shot" src="shot5.png" alt="ガチャ画面"><figcaption class="cap">ガチャ</figcaption></figure>
+          <figure class="shot-item"><img class="shot" src="shot6.png" alt="決勝戦"><figcaption class="cap">決勝戦</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+    <!-- FAQ -->
     <section id="faq" class="container">
       <h2>よくある質問</h2>
       <div class="grid">
-        <details class="card">
-          <summary>課金（まめコイン）は安全ですか？</summary>
-          <div class="muted" style="margin-top:10px">Appleの決済システム（App内課金）を利用しています。支払い情報は開発者側で保持しません。</div>
-        </details>
-        <details class="card">
-          <summary>オンライン対戦がつながりにくい</summary>
-          <div class="muted" style="margin-top:10px">通信状況や時間帯により混雑する場合があります。Wi-Fi推奨・バックグラウンド通信の停止をお試しください。</div>
-        </details>
-        <details class="card">
-          <summary>スキンが装備できない</summary>
-          <div class="muted" style="margin-top:10px">購入後に「プロフィール → スキン選択」から装備可能です。反映されない場合はアプリ再起動をお試しください。</div>
-        </details>
+        <details class="card"><summary>課金（まめコイン）は安全ですか？</summary><div class="muted" style="margin-top:10px">AppleのApp内課金を利用。支払い情報は開発側で保持しません。</div></details>
+        <details class="card"><summary>オンライン対戦がつながりにくい</summary><div class="muted" style="margin-top:10px">通信状況や時間帯により混雑する場合があります。Wi-Fi推奨・バックグラウンド通信の停止をお試しください。</div></details>
+        <details class="card"><summary>スキンが装備できない</summary><div class="muted" style="margin-top:10px">購入後は「プロフィール → スキン選択」から装備可能。反映されない場合はアプリ再起動をお試しください。</div></details>
       </div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <!-- CTA -->
     <section class="container" style="text-align:center">
       <div class="card" style="display:inline-block;padding:20px 24px">
         <h2 style="margin:0 0 8px">今すぐダウンロード</h2>
@@ -402,11 +258,7 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <small>© 2025 100pt Fighters</small>
-    </div>
-  </footer>
+  <footer><div class="container"><small>© 2025 100pt Fighters</small></div></footer>
 
   <script>
     // スムーススクロール
